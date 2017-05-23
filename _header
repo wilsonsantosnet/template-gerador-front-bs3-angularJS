@@ -1,0 +1,13 @@
+﻿<div class="header">
+    <div class="row">
+        <div class="col-sm-7"></div>
+        <div class="col-sm-5 text-right">
+          <button type="button" class="btn btn-menu" ng-click="vm.HideShowMenu()" ng-class="{'active': !IsMenuHidden }">
+            <i class="fa fa-navicon"></i>
+          </button>
+          <button type="button" class="btn btn-sair" ng-click="vm.Logout()">
+            <i class="fa fa-sign-out"></i>
+          </button>
+        </div>
+    </div>
+</div>

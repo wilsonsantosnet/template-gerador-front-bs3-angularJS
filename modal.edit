@@ -1,0 +1,15 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">{{ vm.ActionTitle }}</h3>
+    <p>{{ vm.ActionDescription }}</p>
+</div>
+<div class="modal-body">
+    <div class="panel-body pre-scrollable">
+      <ng-form name="vm.formCrud">
+        <div ng-include="'view/<#className#>/formEdit.html?v=' + vm.randomDefault"></div>
+      </ng-form>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-success" type="button" ng-click="vm.ok(vm.Model)" ng-disabled="!vm.formCrud.$valid">Salvar</button>
+    <button class="btn btn-default" type="button" ng-click="vm.cancel()">Cancelar</button>
+</div>

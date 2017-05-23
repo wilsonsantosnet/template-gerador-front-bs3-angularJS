@@ -1,0 +1,8 @@
+﻿<div ng-include="'view/Shared/_menu.html?v=' + vm.RandomDefault"></div>
+<div class="page-content-wrapper">
+    <div ng-include="'view/Shared/_header.html?v='+ vm.RandomDefault"></div>
+    <div class="container-fluid">
+        <div ng-include="'view/Shared/_breadcrumb.html?v='+ vm.RandomDefault"></div>
+        <div ui-view="content"></div>
+    </div>
+</div>

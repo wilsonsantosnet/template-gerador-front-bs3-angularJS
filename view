@@ -1,0 +1,30 @@
+﻿<div>
+
+  <div class="well">
+      <h3><i class="fa fa-edit"></i> {{ vm.ActionTitle }}</h3>
+      <p>{{ vm.ActionDescription }}</p>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group pull-right" style="padding-bottom:10px;">
+            <a href="javascript:history.back()" class="btn btn-primary btn-sm" data-original-title="" title="" style="margin-left:10px;width:100px" tooltip-placement="top" uib-tooltip="Voltar">
+              <i class="fa fa-reply"></i> Voltar
+            </a>
+            <a class="btn btn-success btn-sm" ng-click="vm.crud.Create()" style="margin-left:10px;width:100px" tooltip-placement="top" uib-tooltip="Cadastrar">
+              <i class="fa fa-plus"></i> Cadastrar
+            </a>
+            <a class="btn btn-default btn-sm" ng-click="vm.crud.xlsExport(vm.crud.ModelFilter)" style="margin-left:10px;width:100px" tooltip-placement="top" uib-tooltip="Exportar para Excel">
+              <i class="fa fa-file-excel-o"></i> Excel
+            </a>
+            <a class="btn btn-primary btn-sm" ng-click="vm.mostrarFiltros =! vm.mostrarFiltros" style="margin-left:10px;width:100px" tooltip-placement="top" uib-tooltip="Filtros">
+              <i class="fa fa-search"></i> Filtros
+            </a>
+          </div>
+        </div>
+      </div>
+   </div>
+
+
+  <div ng-include="'view/<#className#>/filters.html?v=' + vm.randomDefault"></div>
+  <div ng-include="'view/<#className#>/grid.html?v=' + vm.randomDefault"></div>
+    
+</div>

@@ -1,0 +1,25 @@
+﻿(function () {
+    'use strict';
+
+    angular.module("<#contextName#>.Controllers")
+        .controller("<#className#>Controller", <#className#>Controller);
+
+    <#className#>Controller.$inject = ['Crud', '<#className#>Constants', 'Notification', '$stateParams', '$location', '$timeout', 'Api']
+
+    function <#className#>Controller(Crud, <#className#>Constants, Notification, $stateParams, $location, $timeout, Api, $filter) {
+
+        var vm = this;
+
+        <#className#>ControllerBase(vm, Crud, $stateParams, $location, $timeout, <#className#>Constants, Notification, Api, $filter, {
+            Labels: <#className#>Constants.Labels,
+            Attributes: <#className#>Constants.Attributes,
+			 Create: {
+                urlRedirect:"/<#className#>"
+            },
+            Edit: {
+                urlRedirect:"/<#className#>"
+            },
+        });
+
+    };
+})();

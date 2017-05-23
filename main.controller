@@ -1,0 +1,36 @@
+﻿(function () {
+    'use strict';
+
+    angular.module("<#contextName#>.Controllers")
+        .controller("MainController", MainController);
+
+    MainController.$inject = ['$state', '$timeout', '$location', 'AccountService']
+
+    function MainController($state, $timeout, $location, AccountService) {
+
+        var vm = this;
+        vm.randomDefault = Math.random();
+
+        vm.Logout = function () {
+            AccountService.logout();
+        };
+
+		vm.HideShowMenu = function () {
+
+		};
+
+        vm.LoadMenu = function () {
+
+            AccountService.menu(function (result) {
+
+                for (var i = 0; i < result.dataList.length; i++) {
+                    if (result.dataList[i].clamsType == "tools")
+                    {
+                            vm.menu = JSON.parse(result.dataList[i].value);
+                    }
+                }
+            });
+        };
+
+    };
+})();

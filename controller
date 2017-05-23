@@ -1,0 +1,31 @@
+﻿
+function <#className#>ControllerBase(vm, Crud, $stateParams, $location, $timeout, <#className#>Constants, Notification, Api, $filter, customConfig) {
+
+    vm.crud = new Crud.start();
+	vm.randomDefault = Math.random();
+	vm.mostrarFiltros = false;
+
+    vm.crud.Config = {
+        resource: "<#className#>",
+        Create: {
+            pathModal: "view/<#className#>/modalCreate.html",
+        },
+        Edit: {
+            pathModal: "view/<#className#>/modalEdit.html",
+        },
+		Details: {
+            pathModal: "view/<#className#>/details.html",
+        },
+    };
+
+    vm.crud.Config = angular.merge({}, customConfig, vm.crud.Config)
+    vm.crud.SetViewModel(vm);
+	vm.crud.Filter($location.search());
+	vm.crud.ConfigInPage($stateParams, vm, Notification, $timeout)
+
+	vm.ActionTitle = <#className#>Constants.ActionTitle;
+	vm.ActionDescription = <#className#>Constants.ActionDescription;
+	vm.Labels = <#className#>Constants.Labels;	
+	vm.Attributes = <#className#>Constants.Attributes;	
+
+};

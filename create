@@ -1,0 +1,5 @@
+﻿<div>
+  
+  <div ng-include="'view/<#className#>/modalCreate.html?v=' + vm.randomDefault"></div>
+
+</div>

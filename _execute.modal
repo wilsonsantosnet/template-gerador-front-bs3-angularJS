@@ -1,0 +1,10 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">Confirmação operação</h3>
+</div>
+<div class="modal-body">
+    {{ vm.MensagemConfirm }}
+</div>
+<div class="modal-footer">
+    <button class="btn btn-danger" type="button" ng-click="vm.ok()">Sim</button>
+    <button class="btn btn-default" type="button" ng-click="vm.cancel()">Cancelar</button>
+</div>

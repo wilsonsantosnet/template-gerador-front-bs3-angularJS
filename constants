@@ -1,0 +1,31 @@
+﻿(function () {
+    'use strict';
+
+    angular
+        .module("common.utils")
+        .constant("endpoints", {
+            DEFAULT: "http://localhost:[port]/api/",
+			AUTH: "http://localhost:4000/api/"
+        }); 
+
+    angular
+        .module("common.utils")
+        .constant("configsConstants", {
+            STATE_STATUSCODE_401: "/#Login",
+        });
+
+	angular
+      .module("common.utils")
+      .constant("compatibilityConstants", {
+          SuccessHandleAPI: function (data, self) {
+			<#successHandleAPI#>
+          },
+		  GetDataAPI: function (data) {
+			<#getDataAPI#>	
+          },
+		  GetErrorsAPI: function(err){
+			<#getErrorsAPI#>
+		  }
+      });
+
+})();

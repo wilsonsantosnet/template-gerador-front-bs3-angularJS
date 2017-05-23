@@ -1,0 +1,102 @@
+﻿
+            .state('template.<#className#>', {
+                url: '/<#className#>',
+				ncyBreadcrumb: {
+                    label: breadcrumbConstants.<#className#>
+                },
+                views: {
+                    'content': {
+                        templateUrl: MakeUrl('view/<#className#>/index.html'),
+                        controller: '<#className#>Controller as vm',
+                        resolve: {
+                            auth: _isAuth,
+                            loadPlugin: function ($ocLazyLoad) {
+                                return $ocLazyLoad.load(
+                                    [
+										'js/constants/<#className#>.constants.js',
+										'js/controllers/<#className#>/<#className#>.custom.controller.js',
+										'js/controllers/<#className#>/<#className#>.controller.js'
+									]
+                                );
+                            }
+                        }
+                    }
+                }
+            })
+
+
+			.state('template.<#className#>-edit', {
+                url: '/<#className#>/Edit/:Id',
+				ncyBreadcrumb: {
+                    label: breadcrumbConstants.<#className#>
+                },
+                views: {
+                    'content': {
+                        templateUrl: MakeUrl('view/<#className#>/edit.html'),
+                        controller: '<#className#>Controller as vm',
+                        resolve: {
+                            auth: _isAuth,
+                            loadPlugin: function ($ocLazyLoad) {
+                                return $ocLazyLoad.load(
+                                    [
+										'js/constants/<#className#>.constants.js',
+										'js/controllers/<#className#>/<#className#>.custom.controller.js',
+										'js/controllers/<#className#>/<#className#>.controller.js'
+									]
+                                );
+                            }
+                        }
+                    }
+                }
+            })
+
+			.state('<#className#>-print', {
+                url: '/<#className#>/Print/:Id',
+				ncyBreadcrumb: {
+                    label: breadcrumbConstants.<#className#>
+                },
+                views: {
+                    'mainBody': {
+                        templateUrl: MakeUrl('view/<#className#>/details.html'),
+                        controller: '<#className#>Controller as vm',
+                        resolve: {
+                            auth: _isAuth,
+                            loadPlugin: function ($ocLazyLoad) {
+                                return $ocLazyLoad.load(
+                                    [
+										'js/constants/<#className#>.constants.js',
+										'js/controllers/<#className#>/<#className#>.custom.controller.js',
+										'js/controllers/<#className#>/<#className#>.controller.js'
+									]
+                                );
+                            }
+                        }
+                    }
+                }
+            })
+
+
+			.state('template.<#className#>-create', {
+                url: '/<#className#>/Create',
+				ncyBreadcrumb: {
+                    label: breadcrumbConstants.<#className#>
+                },
+                views: {
+                    'content': {
+                        templateUrl: MakeUrl('view/<#className#>/create.html'),
+                        controller: '<#className#>Controller as vm',
+                        resolve: {
+                            auth: _isAuth,
+                            loadPlugin: function ($ocLazyLoad) {
+                                return $ocLazyLoad.load(
+                                    [
+										'js/constants/<#className#>.constants.js',
+										'js/controllers/<#className#>/<#className#>.custom.controller.js',
+										'js/controllers/<#className#>/<#className#>.controller.js'
+									]
+                                );
+                            }
+                        }
+                    }
+                }
+            })

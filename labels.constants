@@ -1,0 +1,19 @@
+﻿(function () {
+    'use strict';
+
+    angular
+        .module("<#contextName#>.Config")
+        .constant("<#className#>Constants", {
+
+			ActionTitle : "<#className#>",
+			ActionDescription : "",
+
+			Labels : {
+<#labels#>			
+			},
+			Attributes : {
+<#attributes#>				
+			}
+        });
+})();
+

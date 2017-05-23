@@ -1,0 +1,12 @@
+﻿(function () {
+    'use strict';
+
+    angular
+        .module("<#contextName#>.Config")
+        .constant("breadcrumbConstants", {
+
+			 ClassName: ">> Description for breadcrumb",
+
+        });
+})();
+

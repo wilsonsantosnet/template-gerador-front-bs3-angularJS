@@ -1,0 +1,20 @@
+﻿<div class="row">
+  <div class="col-xs-12">
+    <div class="panel panel-default" ng-show="vm.mostrarFiltros">
+      <div class="panel-heading">
+        <h3>Filtros</h3>
+      </div>
+      <div class="panel-body" >
+        <form>
+<#FiltersViews#>
+        </form>
+      </div>
+      <div class="panel-footer" ng-show="vm.mostrarFiltros">
+        <button type="button" class="btn btn-primary" ng-click="vm.crud.Filter(vm.crud.ModelFilter)">
+          <span class="fa fa-search"></span>
+          Filtrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

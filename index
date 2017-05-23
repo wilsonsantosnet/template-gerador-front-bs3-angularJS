@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html ng-app="<#contextName#>">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>SmartSecretary</title>
+
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="node_modules/angular-ui-notification/dist/angular-ui-notification.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-i18n/angular-locale_pt-br.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="node_modules/oclazyload/dist/ocLazyLoad.min.js"></script>
+    <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script src="node_modules/angular-ui-notification/dist/angular-ui-notification.min.js"></script>
+    <script src="node_modules/angular-ui-mask/dist/mask.min.js"></script>
+    <script src="node_modules/angular-input-masks/releases/angular-input-masks-dependencies.min.js"></script>
+    <script src="node_modules/angular-input-masks/releases/angular-input-masks.br.min.js"></script>
+    <script src="node_modules/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js"></script>
+    <script src="node_modules/moment/min/moment.min.js"></script>
+    <script src="node_modules/angular-moment/angular-moment.min.js"></script>
+	<script src="node_modules/angular-breadcrumb/dist/angular-breadcrumb.min.js"></script>
+
+    <script src="js/common/module.js"></script>
+    <script src="js/common/cache.js"></script>
+    <script src="js/common/loading.js"></script>
+    <script src="js/common/api.js"></script>
+    <script src="js/common/notification.js"></script>
+    <script src="js/common/crud.js"></script>
+    <script src="js/common/directive.js"></script>
+    <script src="js/common/parse.js"></script>
+	<script src="js/common/uri.js"></script>
+    <script src="js/common/xls-export.js"></script>
+    <script src="js/common/file-download.js"></script>
+
+    <script src="js/init/modules.js"></script>
+    <script src="js/init/app.js"></script>
+
+
+    <script src="js/services/account.service.js"></script>
+
+    <script src="js/constants/token.constants.js"></script>
+    <script src="js/constants/constants.js"></script>
+	<script src="js/constants/breadcrumb.constants.js"></script>
+
+    <script src="js/config/route.config.js"></script>
+    <script src="js/config/route.custom.config.js"></script>
+    <script src="js/config/value.config.js"></script>
+
+    <script src="js/controllers/shared/main.custom.controller.js"></script>
+
+</head>
+<body ng-controller="MainController as vm" ui-view="mainBody">
+    <div class="loader" ng-show="loading">
+        <img src="/images/loader.gif" alt="Alternate Text" />
+    </div>
+    <div class="wrapper" ui-view="main">
+    </div>
+</body>
+</html>

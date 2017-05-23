@@ -1,0 +1,2 @@
+﻿                <dt>{{ ::vm.Labels.<#propertyName#> }}</dt>
+                <dd bind-custom-value="vm.Model.<#propertyName#>" bind-Custom-Type="<#type#>" <#moreattr#>></dd>
