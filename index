@@ -23,6 +23,8 @@
     <script src="node_modules/moment/min/moment.min.js"></script>
     <script src="node_modules/angular-moment/angular-moment.min.js"></script>
 	<script src="node_modules/angular-breadcrumb/dist/angular-breadcrumb.min.js"></script>
+	<script src="node_modules/clipboard/dist/clipboard.min.js"></script>
+    <script src="node_modules/ngclipboard/dist/ngclipboard.min.js"></script>
 
     <script src="js/common/module.js"></script>
     <script src="js/common/cache.js"></script>

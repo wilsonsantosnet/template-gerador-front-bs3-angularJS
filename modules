@@ -6,6 +6,7 @@
             'ui.bootstrap',
             'common.utils',
             'ui-notification',
+			'ngclipboard'
         ]);
 
     angular
