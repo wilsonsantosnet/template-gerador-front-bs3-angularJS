@@ -32,7 +32,7 @@
 
 
 
-            var apiSSO = new Api.resourse("Account");
+            var apiSSO = new Api.resourse("Auth");
 
             apiSSO.Data = {
                 ClientId: "<#contextName#>",
