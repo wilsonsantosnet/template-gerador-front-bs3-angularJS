@@ -22,13 +22,23 @@
         vm.LoadMenu = function () {
 
             AccountService.menu(function (result) {
+			 for (var i = 0; i < result.dataList.length; i++) {
 
-                for (var i = 0; i < result.dataList.length; i++) {
-                    if (result.dataList[i].clamsType == "tools")
-                    {
-                            vm.menu = JSON.parse(result.dataList[i].value);
+                    if (result.dataList[i].clamsType == "name") {
+
+                        vm.userName = result.dataList[i].value
+                    }
+
+                    if (result.dataList[i].clamsType == "role") {
+
+                        vm.userRole = result.dataList[i].value
+                    }
+
+                    if (result.dataList[i].clamsType == "tools") {
+                        vm.menu = JSON.parse(result.dataList[i].value);
                     }
                 }
+                vm.userInfo = "Usuário logado: " + vm.userName + " [" + vm.userRole + "]" 
             });
         };
 

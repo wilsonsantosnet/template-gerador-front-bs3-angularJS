@@ -32,12 +32,12 @@
 
 
 
-            var apiSSO = new Api.resourse("Account");
+            var apiSSO = new Api.resourse("Auth");
 
             apiSSO.Data = {
                 ClientId: "<#contextName#>",
                 ClientSecret: "secret",
-                Scope: "openid profile ssosm",
+                Scope: "openid profile ssosa",
                 User: email,
                 Password: password
             };

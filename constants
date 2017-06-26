@@ -4,7 +4,7 @@
     angular
         .module("common.utils")
         .constant("endpoints", {
-            DEFAULT: "http://localhost:[port]/api/",
+            DEFAULT: "http://localhost:8122/api/",
 			AUTH: "http://localhost:4000/api/"
         }); 
 
