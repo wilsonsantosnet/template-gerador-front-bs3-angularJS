@@ -23,7 +23,12 @@
             'ui-notification',
             'ui.mask',
             'ui.utils.masks',
-            'ui.bootstrap.datetimepicker'
+            'ui.bootstrap.datetimepicker',
+			'ngFileUpload',
+            'ncy-angular-breadcrumb',
+			'ui.select',
+            'ngSanitize',
+			'textAngular'
         ]);
 
     angular
